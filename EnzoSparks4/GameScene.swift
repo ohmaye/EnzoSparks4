@@ -9,6 +9,8 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    let chipmunkSound = SKAction.playSoundFileNamed("Cartoon Chipmunk.caf", waitForCompletion: false)
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         self.backgroundColor = SKColor.whiteColor()
@@ -25,6 +27,7 @@ class GameScene: SKScene {
         sprite.position = position
         sprite.physicsBody = SKPhysicsBody(circleOfRadius: 5)
         self.addChild(sprite)
+        self.runAction(chipmunkSound)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -34,6 +37,7 @@ class GameScene: SKScene {
             let location = touch.locationInNode(self)
             
             createSprite(location)
+            showEmitter("MagicParticle", position: location)
         }
     }
    
@@ -41,13 +45,25 @@ class GameScene: SKScene {
         /* Called before each frame is rendered */
     }
     
+    func getEmitter(name : String) -> SKEmitterNode {
+        let path = NSBundle.mainBundle().pathForResource(name, ofType: "sks")
+        let emitterNode : SKEmitterNode? = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? SKEmitterNode
+        return emitterNode!;
+    }
+    
+    func showEmitter( name : String, position : CGPoint) {
+        let emitter = getEmitter(name)
+        emitter.position = position
+        self.addChild(emitter)
+    }
+    
     override func didSimulatePhysics() {
 
         for child in children {
             if child is SKSpriteNode {
-                if child.position.y < 0 {
+                if child.position.y < 20 {
                     child.removeFromParent()
-                    println("Removed")
+                    showEmitter("SmokeParticle", position: child.position)
                 }
             }
         }

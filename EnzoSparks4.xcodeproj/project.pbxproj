@@ -15,6 +15,10 @@
 		F78C803019769DEE00918A7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78C802F19769DEE00918A7B /* Images.xcassets */; };
 		F78C803C19769DEE00918A7B /* EnzoSparks4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C803B19769DEE00918A7B /* EnzoSparks4Tests.swift */; };
 		F78C80481976A34900918A7B /* roundSmiley.png in Resources */ = {isa = PBXBuildFile; fileRef = F78C80471976A34900918A7B /* roundSmiley.png */; };
+		F78C804B1976AEF700918A7B /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F78C80491976AEF700918A7B /* SmokeParticle.sks */; };
+		F78C804C1976AEF700918A7B /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F78C804A1976AEF700918A7B /* spark.png */; };
+		F78C804E1976B34500918A7B /* MagicParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F78C804D1976B34500918A7B /* MagicParticle.sks */; };
+		F78C80501976B54700918A7B /* Cartoon Chipmunk.caf in Resources */ = {isa = PBXBuildFile; fileRef = F78C804F1976B54700918A7B /* Cartoon Chipmunk.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		F78C803A19769DEE00918A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F78C803B19769DEE00918A7B /* EnzoSparks4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnzoSparks4Tests.swift; sourceTree = "<group>"; };
 		F78C80471976A34900918A7B /* roundSmiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roundSmiley.png; sourceTree = "<group>"; };
+		F78C80491976AEF700918A7B /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
+		F78C804A1976AEF700918A7B /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F78C804D1976B34500918A7B /* MagicParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicParticle.sks; sourceTree = "<group>"; };
+		F78C804F1976B54700918A7B /* Cartoon Chipmunk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cartoon Chipmunk.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +89,18 @@
 		F78C802119769DEE00918A7B /* EnzoSparks4 */ = {
 			isa = PBXGroup;
 			children = (
+				F78C804F1976B54700918A7B /* Cartoon Chipmunk.caf */,
 				F78C80471976A34900918A7B /* roundSmiley.png */,
 				F78C802419769DEE00918A7B /* AppDelegate.swift */,
+				F78C80491976AEF700918A7B /* SmokeParticle.sks */,
+				F78C804A1976AEF700918A7B /* spark.png */,
 				F78C802619769DEE00918A7B /* GameScene.sks */,
 				F78C802819769DEE00918A7B /* GameScene.swift */,
 				F78C802A19769DEE00918A7B /* GameViewController.swift */,
 				F78C802C19769DEE00918A7B /* Main.storyboard */,
 				F78C802F19769DEE00918A7B /* Images.xcassets */,
 				F78C802219769DEE00918A7B /* Supporting Files */,
+				F78C804D1976B34500918A7B /* MagicParticle.sks */,
 			);
 			path = EnzoSparks4;
 			sourceTree = "<group>";
@@ -198,8 +210,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78C804E1976B34500918A7B /* MagicParticle.sks in Resources */,
+				F78C80501976B54700918A7B /* Cartoon Chipmunk.caf in Resources */,
 				F78C803019769DEE00918A7B /* Images.xcassets in Resources */,
+				F78C804C1976AEF700918A7B /* spark.png in Resources */,
 				F78C80481976A34900918A7B /* roundSmiley.png in Resources */,
+				F78C804B1976AEF700918A7B /* SmokeParticle.sks in Resources */,
 				F78C802719769DEE00918A7B /* GameScene.sks in Resources */,
 				F78C802E19769DEE00918A7B /* Main.storyboard in Resources */,
 			);
