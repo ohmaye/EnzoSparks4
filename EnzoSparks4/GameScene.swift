@@ -12,14 +12,18 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         self.backgroundColor = SKColor.whiteColor()
+        self.physicsWorld.gravity = CGVectorMake(0.0, -0.4)
     }
     
     func createSprite( position : CGPoint ) {
         let sprite = SKSpriteNode(imageNamed: "roundSmiley.png")
-        sprite.xScale = 0.2
-        sprite.yScale = 0.2
+        sprite.name = "smiley"
+        sprite.xScale = 0.3
+        sprite.yScale = 0.3
         sprite.color = SKColor.blueColor()
+        sprite.alpha = 0.8
         sprite.position = position
+        sprite.physicsBody = SKPhysicsBody(circleOfRadius: 5)
         self.addChild(sprite)
     }
     
@@ -35,5 +39,17 @@ class GameScene: SKScene {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+    }
+    
+    override func didSimulatePhysics() {
+
+        for child in children {
+            if child is SKSpriteNode {
+                if child.position.y < 0 {
+                    child.removeFromParent()
+                    println("Removed")
+                }
+            }
+        }
     }
 }
